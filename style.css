@@ -4,25 +4,34 @@ en las secciones señaladas */
 /*Já deixaremos o básico de reset de estilos. Caso queira adicionar mais informações
 coloque nas sessões indicadas*/
 
-:root{
+:root {
     /* Inserta la variable de los otros colores inspeccionando el exemplo de figma */
     /*Se esforce para trabalhar com variáveis, é uma dica profissional valiosa*/
-   --cor-de-fundo: #F5F5F5;
-   --cor-de-link: #000;
+    --cor-de-icon: #2A7AE4;
+    --cor-de-icon-bk: #FFFFFF;
+    --cor-de-fundo: #F5F5F5;
+    --cor-de-link: #000;
+    --cor-de-sobre-bk: #EAF2FD;
+
+    --cor-de-texto: #464646;
 }
 
 body {
     box-sizing: border-box;
-    background-color: var(--cor-de-fundo) ;
+    background-color: var(--cor-de-fundo);
     font-family: 'Raleway';
     margin: 0;
     padding: 0;
     line-height: 1;
 }
-ol, ul,li {
+
+ol,
+ul,
+li {
     list-style: none;
 }
-a{
+
+a {
     text-decoration: none;
     color: var(--cor-de-link);
 }
@@ -41,51 +50,297 @@ https://en.bem.info/methodology/quick-start/*/
 
 /*Sección Menu*/
 
-section.menu{
+section.menu {
+    display: flex;
+    justify-content: space-between;
+    margin: 1.5rem;
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+
+}
+
+.menu__header {
+    align-items: center;
+    display: flex;
+}
+
+.menu__title {
+    font-family: Raleway;
+    padding-left: 1rem;
+
+}
+
+.menu__list {
+    display: flex;
+
+
+}
+
+.menu__list__item a {
+    color: var(--cor-de-texto);
+    margin-right: 1.25rem;
+    font-family: Raleway;
+
+}
+
+.contacto a {
+    color: var(--cor-de-link);
+    font-weight: bold;
 
 }
 
 /*Sección Title*/
 
-section.title{
+section.title {
+    display: flex;
+    margin: 2.5rem;
+    padding: 2.5rem;
+}
+
+.title__div {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.title__container {
+    font-family: Raleway;
+    display: flex;
+    flex-direction: column;
+    color: var(--cor-de-texto);
+}
+
+.title__bio {
+    font-size: 52px;
+}
+
+.title__subsection {
+
+    font-weight: 300;
+    font-size: 20px;
+    padding-top: 1.5rem;
+
+}
+
+.title__network {
+    display: flex;
+
+}
+
+.title__network__item {
+
+    padding-top: 1rem;
+    margin-right: 1.5rem;
 
 }
 
 /*Sección About*/
 
-section.about{
+section.about {
+    font-family: Raleway;
+    background-color: var(--cor-de-sobre-bk);
+    padding: 4rem;
+
+}
+
+.about__title{
+    font-size: 32px;
+}
+
+/*Seccion Skills*/
+.skills {
+    /*seccion*/
+    font-family: Raleway;
+    padding: 4rem 0 0 0;
+    color: var(--cor-de-texto);
+}
+
+.skills__title {
+    color: var(--cor-de-texto);
+    font-size: 22px;
+    text-align: center;
+
+}
+
+.skills__line {
+    /*el bloque dentro de section*/
+    display: flex;
+    flex-wrap: wrap;
+
+    justify-content: center;
+    margin-top: 2.5rem;
+
+}
+
+.skills__box {
+    /*los cuadros*/
+    background: var(--cor-de-icon-bk);
+    display: flex;
+
+    align-items: flex-end;
+    width: 176px;
+    height: 174px;
+    padding-left: 1rem;
+    margin-right: 1.5rem;
+    margin-bottom: 5rem;
+
+}
+
+.skills__img {
+    margin-bottom: 1.5rem;
+    /*display: flex;*/
+
+
+}
+
+.skills__name {
+    /*display: flex;*/
+    font-weight: bold;
 
 }
 
 /*Sección Hobbies*/
 
-section.hobbies{
-    
+section.hobbies {
+    font-family: Raleway;
+    padding: 4rem;
+    /*derecha izquierda arriba abajo*/
+    color: var(--cor-de-texto);
+}
+
+.hobbies__title {
+    font-size: 22px;
+    color: var(--cor-de-texto);
+    text-align: center;
+}
+
+.hobbies__line {
+    display: flex;
+    flex-wrap: wrap;
+
+    justify-content: center;
+    margin-top: 2.5rem;
+
+}
+
+.hobbies__box {
+    background: var(--cor-de-icon-bk);
+    display: flex;
+    align-items: flex-end;
+    width: 176px;
+    height: 174px;
+    padding-left: 1rem;
+    margin-right: 1.5rem;
+    margin-bottom: 5rem;
 }
 
 /* Experiencia Académica*/
 
-section.academic{
+section.academic {
+    background-color: var(--cor-de-sobre-bk);
+    padding: 4rem;
 
+}
+
+.academic__title {
+    font-family: Raleway;
+    color: var(--cor-de-texto);
+    font-size: 22px;
+    text-align: center;
+}
+
+.academic__courses{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 2.5rem;
+}
+
+.academic__courses__box {
+    display: flex;
+   justify-content: center;
+   
+    margin-right: 1.5rem;
+    margin-bottom: 5rem;
+
+}
+
+
+.academic__courses__list {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.academic__courses__item__img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--cor-de-icon-bk);
+    width: 368px;
+    height: 286px;
+}
+
+.academic__courses__item__title {
+    margin-top: 2rem;
+    margin-left: .5rem;
+    font-family: Raleway;
+    color: var(--cor-de-texto);
+    
+}
+
+.academic__courses__item__subtitle{
+    font-family: Raleway;
+    color: var(--cor-de-texto);
+    margin-left: .5rem;
+    
 }
 
 /* experiencia*/
 
-section.experience{
+section.experience {}
+
+.experience__section__title{
 
 }
 
+.experiencie__box{
+    
+}
+.experience__img{
+
+}
+
+.experience__info{
+
+
+}
+
+.experience__title{
+
+}
+
+.experience__text{
+
+}
+
+.experience__description{
+
+}
+
+.experience__repo{
+
+}
+
+.experience__demo{
+    
+}
 /*Contacto*/
 
-section.formcontato{
-
-}
+section.formcontato {}
 
 /*footeer*/
 
-section.footer{
-   
-}
+section.footer {}
 
 /* Vamos a desafiarnos trabajando con responsividad?
 Utiliza las referencias de los breakpoints @media abajo */
@@ -94,39 +349,39 @@ Utiliza las referencias de los breakpoints @media abajo */
 /*Tablet*/
 @media (min-width: 768px) {
 
-/* Menú */
+    /* Menú */
 
-/*title*/
+    /*title*/
 
-/*Skills*/
+    /*Skills*/
 
-/*Hobbies*/
+    /*Hobbies*/
 
-/*Formación Académica*/
+    /*Formación Académica*/
 
-/*Experiencia Profesional*/
+    /*Experiencia Profesional*/
 
 }
 
 /*Mobile*/
 @media (min-width: 425px) {
 
-/*Menu*/
+    /*Menu*/
 
-/*Titulo*/
+    /*Titulo*/
 
-/*Sección sobre mi*/
+    /*Sección sobre mi*/
 
-/*Skills*/
+    /*Skills*/
 
-/*Hobbies*/
- 
-/*Formación Académica*/
+    /*Hobbies*/
 
-/*Experiencia Profesional*/
+    /*Formación Académica*/
 
- /*Contacto*/
+    /*Experiencia Profesional*/
 
-/*Footer*/
+    /*Contacto*/
+
+    /*Footer*/
 
 }
